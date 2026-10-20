@@ -54,6 +54,7 @@ jobs:
             ${{ steps.image.outputs.name }}:${GITHUB_SHA::7}
 
       - name: Publicar imagen en GHCR
+      
         run: |
           docker push \
             ${{ steps.image.outputs.name }}:${GITHUB_SHA::7}
